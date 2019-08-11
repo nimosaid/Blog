@@ -1,4 +1,4 @@
-## Blog application
+<!-- ## Blog application
 
 This is a great application description
 
@@ -73,4 +73,4 @@ Bloggy Blogs is Copyright 2019 Gabriel Oduori licensed under GNU avaliable at ht
 
 ## Contact
 
-gabriel.oduori@gmail.com
+gabriel.oduori@gmail.com -->
