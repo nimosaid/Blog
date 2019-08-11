@@ -6,12 +6,13 @@ from flask_login import LoginManager
 from flask_moment import Moment
 
 login_manager = LoginManager()
-login_manager.session_protection = 'strong'
-login_manager.login_view = 'auth.strong'
+login_manager.session_protection = 'Strong'
+login_manager.login_view = 'auth.login'
 
 
 bootstrap = Bootstrap()
 db = SQLAlchemy()
+mail = Mail()
 
 def create_app(config_name):
     
@@ -27,6 +28,8 @@ def create_app(config_name):
     bootstrap.init_app(app)
     db.init_app(app)
     login_manager.init_app(app)
+    mail.init_app(app)
+
     
     #Registering Blueprints
     from app.auth import auth as auth_blueprint
