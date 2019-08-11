@@ -42,7 +42,7 @@ def login():
             # flask saves that URL as 'next', checks if the page exists anf if not,
             # goes back to homepage.
             return redirect(request.args.get('next') or url_for('main.index'))
-    title = "Log in Page"
+    title = "Log in"
     return render_template('auth/login.html',form = form,title=title)
 
 #logout
