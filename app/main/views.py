@@ -25,7 +25,7 @@ def index():
 @main.route('/info')
 def info():
     '''
-    Infor page
+    Info page
     '''
     return render_template('info.html')
 
