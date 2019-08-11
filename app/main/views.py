@@ -1,6 +1,3 @@
-
-#main/views.py
-
 from flask import render_template, request, redirect, Blueprint
 from app.main import main
 from app.auth import auth
