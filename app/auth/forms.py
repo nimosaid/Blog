@@ -24,28 +24,28 @@ class RegistrationForm(FlaskForm):
     password_confirm = PasswordField('Confirm Passwords',validators = [DataRequired()])
     submit = SubmitField('Register')
     
-#     def validate_email(self,data_field):
-#             if User.query.filter_by(email = data_field.data).first():
-#                 raise ValidationError('The email address has already been used')
+    def validate_email(self,data_field):
+            if User.query.filter_by(email = data_field.data).first():
+                raise ValidationError('The email address has already been used')
 
-#     def validate_username(self,data_field):
-#         if User.query.filter_by(username = data_field.data).first():
-#             raise ValidationError('That username is already taken')
+    def validate_username(self,data_field):
+        if User.query.filter_by(username = data_field.data).first():
+            raise ValidationError('That username is already taken')
             
 
-# class UpdateUserForm(FlaskForm):
-#     email = StringField('Your Email Address',validators=[DataRequired(),Email()])
-#     username = StringField('Username',validators=[DataRequired()])
-#     # picture = FileField('Update Profile picture', validators=[FileAllowed(['jpg','png','tif'])])
-#     submit = SubmitField('Update')
+class UpdateUserForm(FlaskForm):
+    email = StringField('Your Email Address',validators=[DataRequired(),Email()])
+    username = StringField('Username',validators=[DataRequired()])
+    # picture = FileField('Update Profile picture', validators=[FileAllowed(['jpg','png','tif'])])
+    submit = SubmitField('Update')
 
-#     def validate_email(self,data_field):
-#             if User.query.filter_by(email =data_field.data).first():
-#                 raise ValidationError('The email address has already been used')
+    def validate_email(self,data_field):
+            if User.query.filter_by(email =data_field.data).first():
+                raise ValidationError('The email address has already been used')
 
-#     def validate_username(self,data_field):
-#         if User.query.filter_by(username = data_field.data).first():
-#             raise ValidationError('That username is already taken')
+    def validate_username(self,data_field):
+        if User.query.filter_by(username = data_field.data).first():
+            raise ValidationError('That username is already taken')
     
     
  
