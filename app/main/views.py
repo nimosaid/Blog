@@ -14,8 +14,7 @@ def index():
     quotes = get_quote()
 
     page = request.args.get('page', 1, type=int)
-    posts = Blog.query.order_by(Blog.timestamp.desc()).all()
-    return render_template('index.html',quotes = quotes, posts=posts)
+    return render_template('index.html',quotes = quotes)
 
 
 
