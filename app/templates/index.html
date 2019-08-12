@@ -1,17 +1,17 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="jumbotron"style="text-align:center; background-color:#CDB5CD;">
-    <h1 class="display-4">Bloggy Blogs</h1>
+    <h1 class="display-4">The Underworld</h1>
     <p class="lead">This is a personal blogging website where you can create and share your opinions and other users can read and comment on them. Additionally, there is a feature that displays random quotes to inspire users. </p>
     <hr class="my-4">
     <p>Come share our great posts. Add yours to the mix as well.</p>
-    <a class="btn btn-primary btn-sm" href="{{ url_for('main.info')}}" role="button">Learn more about this page</a>
+    <a class="btn btn-primary btn-sm" href="{{ url_for('main.info')}}" role="button">Explore the Underworld</a>
 </div>
 
 
 
-<div class="container">
-    <h3> Quotes </h3>
+<div class="container" style="text-align:center;">
+    <h3 style=color:indigo;><strong> Quotes </strong></h3>
 
 
     <article class="row">
@@ -32,8 +32,8 @@
     </article>
     {% endfor %}
 </div>
-<div class="container">
-    <h2>Blogs Page</h2>
+<div class="container" style="text-align:center;">
+    <h2 style="color:indigo;">Custom Underworld</h2>
     {% for post in posts %}
     <div class="card">
         <div class="card-body">
