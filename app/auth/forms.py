@@ -13,7 +13,7 @@ from app.models import User
 
 class LoginForm(FlaskForm):
     email = StringField('Email', validators = [Required(), Email()])
-    password = PasswordField('Password', validators=[DataRequired()])
+    password = PasswordField('Password', validators=[Required()])
     remember_me = BooleanField('Keep me logged in')
     submit = SubmitField('Log In')
     
@@ -21,7 +21,7 @@ class RegistrationForm(FlaskForm):
     email = StringField('Your Email Address',validators=[Required(),Email()])
     username = StringField('Username',validators = [Required()])
     password = PasswordField('Password',validators = [Required(), EqualTo('password_confirm',message = 'Passwords must match')])
-    password_confirm = PasswordField('Confirm Passwords',validators = [DataRequired()])
+    password_confirm = PasswordField('Confirm Passwords',validators = [Required()])
     submit = SubmitField('Register')
     
     def validate_email(self,data_field):
@@ -34,8 +34,8 @@ class RegistrationForm(FlaskForm):
             
 
 class UpdateUserForm(FlaskForm):
-    email = StringField('Your Email Address',validators=[DataRequired(),Email()])
-    username = StringField('Username',validators=[DataRequired()])
+    email = StringField('Your Email Address',validators=[Required(),Email()])
+    username = StringField('Username',validators=[Required()])
     # picture = FileField('Update Profile picture', validators=[FileAllowed(['jpg','png','tif'])])
     submit = SubmitField('Update')
 
